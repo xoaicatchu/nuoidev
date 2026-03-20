@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuôi Dev Đỗ Anh Việt | Tài năng cần được bảo trợ</title>
+    <title>Đỗ Anh Việt 2026 | Human Asset</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -11,149 +11,106 @@
             font-family: 'Inter', sans-serif; 
             background-color: #000; 
             color: #fff; 
-            line-height: 1.6; /* Fix lỗi che dấu tiếng Việt */
+            line-height: 1.8; 
             overflow-x: hidden;
         }
-        /* Gradient rực rỡ kiểu Apple Event */
+        /* Gradient rực rỡ đặc trưng Apple Event */
         .vibrant-gradient {
-            background: linear-gradient(90deg, #ff2d55, #ff9500, #ffcc00, #4cd964, #5ac8fa, #007aff, #5856d6, #ff2d55);
+            background: linear-gradient(90deg, #ff375f, #ff9f0a, #ffd60a, #30d158, #0a84ff, #5e5ce6, #ff375f);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shine 5s linear infinite;
-            padding-top: 10px; /* Tránh mất dấu trên */
-            padding-bottom: 10px;
+            animation: flow 5s linear infinite;
+            padding: 10px 0;
         }
-        @keyframes shine {
-            to { background-position: 200% center; }
-        }
+        @keyframes flow { to { background-position: 200% center; } }
+
         .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 32px;
-            transition: all 0.4s ease;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 40px;
         }
-        .glass-card:hover {
-            background: rgba(255, 255, 255, 0.08);
-            transform: scale(1.02);
-            border-color: rgba(255, 255, 255, 0.3);
+        /* Khung QR siêu sạch sẽ theo ý bạn */
+        .qr-only-frame {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 40px;
+            box-shadow: 0 0 100px rgba(10, 132, 255, 0.2);
+            display: inline-block;
         }
-        .btn-vibrant {
-            background: linear-gradient(90deg, #007aff, #5856d6);
-            padding: 16px 40px;
-            border-radius: 980px;
-            font-weight: 600;
-            transition: all 0.3s;
+        .qr-only-frame img {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            display: block;
         }
-        .btn-vibrant:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(88, 86, 214, 0.5);
+        @media (max-width: 768px) {
+            .qr-only-frame img { width: 250px; height: 250px; }
         }
-        /* Fix khoảng cách để không mất dấu */
-        h1, h2, h3 { line-height: 1.3 !important; }
     </style>
 </head>
 <body>
 
     <!-- Nav -->
-    <nav class="fixed w-full z-50 bg-black/60 backdrop-blur-xl border-b border-white/10">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center text-xs font-bold tracking-widest uppercase">
-            <span class="vibrant-gradient text-sm">Nuôi Dev Đỗ Anh Việt</span>
-            <a href="#donate" class="btn-vibrant py-2 px-6 text-[10px]">Ủng hộ ngay</a>
-        </div>
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-2xl border-b border-white/5 px-8 py-5 flex justify-between items-center">
+        <span class="text-[10px] font-black tracking-[0.5em] uppercase opacity-50">Viet Dev 2026</span>
+        <a href="#invest" class="text-[10px] font-bold text-blue-500 tracking-widest">ĐẦU TƯ NGAY</a>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Header -->
     <header class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-        <h2 class="text-gray-400 text-lg md:text-xl font-medium mb-4">Dự án nhân văn 2026</h2>
-        <h1 class="text-6xl md:text-[90px] font-bold vibrant-gradient tracking-tight">
-            Nghèo. Đẹp trai.<br>Học giỏi.
+        <h1 class="text-6xl md:text-[110px] font-bold tracking-tighter leading-none mb-10">
+            Nghèo. Đẹp trai.<br>
+            <span class="vibrant-gradient">Học cực giỏi.</span>
         </h1>
-        <p class="mt-8 text-xl md:text-2xl text-gray-400 max-w-3xl font-light">
-            Đỗ Anh Việt — Một bản thể đầy nghịch lý: <br class="hidden md:block">
-            Sở hữu trí tuệ vô hạn nhưng đang vận hành trên một nguồn lực tài chính hữu hạn.
+        <p class="text-xl md:text-2xl text-gray-500 max-w-2xl font-light">
+            Sứ mệnh bảo trợ tài năng Đỗ Anh Việt. <br>
+            Đầu tư để mua nhà, tậu xe và kiến tạo tương lai.
         </p>
     </header>
 
-    <!-- Profile Detail -->
-    <section class="py-32 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-            <div class="glass-card p-10">
-                <h3 class="text-2xl font-bold mb-4 text-pink-500">Nhan sắc tuyệt mỹ.</h3>
-                <p class="text-gray-300">Vẻ ngoài cuốn hút giúp Việt tạo thiện cảm trong mọi dòng code. Một giao diện chuẩn "Premium" cần được duy trì bằng chế độ chăm sóc xứng tầm.</p>
+    <!-- Trọng điểm -->
+    <section class="py-20 px-8">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+            <div class="glass-card p-12">
+                <p class="text-3xl mb-6">🏠</p>
+                <h3 class="text-xl font-bold mb-4">An cư.</h3>
+                <p class="text-gray-500 font-light text-sm">Nền móng để Việt tập trung 100% trí tuệ vào code.</p>
             </div>
-            <div class="glass-card p-10">
-                <h3 class="text-2xl font-bold mb-4 text-blue-400">Trí tuệ kiệt xuất.</h3>
-                <p class="text-gray-300">Học giỏi, tư duy logic sắc bén. Việt có khả năng giải quyết các bài toán phức tạp nhất, nhưng hiện tại đang gặp khó khăn ở bài toán "Tài chính cá nhân".</p>
+            <div class="glass-card p-12">
+                <p class="text-3xl mb-6">🚗</p>
+                <h3 class="text-xl font-bold mb-4">Vận hành.</h3>
+                <p class="text-gray-500 font-light text-sm">Bảo vệ nhan sắc và trí tuệ trước nắng bụi cuộc đời.</p>
             </div>
-            <div class="glass-card p-10">
-                <h3 class="text-2xl font-bold mb-4 text-orange-400">Gia cảnh tối giản.</h3>
-                <p class="text-gray-300">Sinh ra trong sự thiếu thốn vật chất nhưng chưa bao giờ thiếu thốn ý chí. Việt cần những tấm lòng hảo tâm để viết tiếp chương mới của cuộc đời.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- The "Nuôi Dev" Concept -->
-    <section class="py-32 bg-zinc-950/50 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12">Tại sao nên "Nuôi Việt"?</h2>
-            <div class="space-y-12 text-left">
-                <div class="flex items-start space-x-6">
-                    <div class="text-4xl">🏠</div>
-                    <div>
-                        <h4 class="text-xl font-bold">Mục tiêu An cư</h4>
-                        <p class="text-gray-400">Giúp Việt có một mái nhà riêng để không còn phải lo lắng về tiền trọ, tập trung toàn lực cho việc code và cống hiến.</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-6">
-                    <div class="text-4xl">🚗</div>
-                    <div>
-                        <h4 class="text-xl font-bold">Mục tiêu Vận hành</h4>
-                        <p class="text-gray-400">Tậu một chiếc xe để Việt có thể di chuyển an toàn, bảo vệ "nhan sắc và trí tuệ" trước nắng bụi cuộc đời.</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-6">
-                    <div class="text-4xl">👶</div>
-                    <div>
-                        <h4 class="text-xl font-bold">Quỹ tương lai</h4>
-                        <p class="text-gray-400">Tích góp để nuôi dưỡng thế hệ F1 của Việt – những hậu duệ tiềm năng cho ngành công nghệ Việt Nam.</p>
-                    </div>
-                </div>
+            <div class="glass-card p-12">
+                <p class="text-3xl mb-6">👶</p>
+                <h3 class="text-xl font-bold mb-4">Kế thừa.</h3>
+                <p class="text-gray-500 font-light text-sm">Tích góp nguồn lực cho thế hệ F1 tài năng mai sau.</p>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section id="donate" class="py-40 px-6 relative overflow-hidden">
-        <!-- Background Glow -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/20 blur-[120px] rounded-full -z-10"></div>
-        
-        <div class="max-w-4xl mx-auto glass-card p-12 md:p-20 text-center border-white/20">
-            <h2 class="text-5xl font-bold mb-6">Ủng hộ Đỗ Anh Việt.</h2>
-            <p class="text-xl text-gray-400 mb-12 font-light">Dù ít dù nhiều, sự đóng góp của bạn là viên gạch xây nên ngôi nhà cho Việt.</p>
+    <!-- QR Section (Chỉ còn QR) -->
+    <section id="invest" class="py-40 text-center px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl md:text-7xl font-bold mb-12 tracking-tighter vibrant-gradient">Xác nhận đồng hành.</h2>
+            <p class="text-xl text-gray-500 mb-20 font-light">Quét mã để hỗ trợ Việt thực hiện ước mơ.</p>
             
-            <div class="inline-block bg-white p-6 rounded-[40px] mb-12 shadow-2xl">
-                <!-- QR VietQR -->
-                <img src="https://img.vietqr.io/image/techcombank-9918229516-compact2.jpg?accountName=DO%20ANH%20VIET&addTag=NuoiDevHaoTam" 
-                     alt="QR Donate" class="w-64 h-64 md:w-80 md:h-80 mx-auto">
+            <!-- CHỈ CÒN DUY NHẤT MÃ QR -->
+            <div class="qr-only-frame">
+                <img src="https://img.vietqr.io/image/techcombank-9918229516-compact2.jpg?accountName=DO%20ANH%20VIET" alt="QR Investment">
             </div>
 
-            <div class="mb-12">
-                <p class="text-3xl font-bold tracking-tight">ĐỖ ANH VIỆT</p>
-                <p class="text-blue-400 font-medium mt-2">TECHCOMBANK • 9918 2295 16</p>
-            </div>
-
-            <div class="bg-blue-500/10 border border-blue-500/30 p-6 rounded-2xl inline-block">
-                <p class="text-blue-400 font-semibold text-lg">Gói bảo trợ tùy tâm</p>
-                <p class="text-gray-500 text-sm mt-1">Góp gió thành bão - Giúp Việt mua nhà, tậu xe.</p>
+            <div class="mt-24 opacity-30">
+                <p class="text-[10px] tracking-[0.5em] uppercase">Mọi sự đóng góp đều được trân trọng</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-20 text-center opacity-40 text-[10px] tracking-[0.4em] uppercase">
-        Cảm ơn những tấm lòng hảo tâm • 2026 • Do Anh Viet Initiative
+    <footer class="py-20 text-center opacity-20 text-[10px] tracking-[0.5em] uppercase">
+        © 2026 THE VIET INITIATIVE
     </footer>
 
 </body>
